@@ -1,0 +1,1432 @@
+    /* Aplicar isso para TODAS as regras: */
+
+.conferencia-nota {
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.conferencia-nota .page-header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.conferencia-nota .header-content h2 {
+  margin: 0 0 0.5rem 0;
+  color: #1f2937;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.conferencia-nota .header-content p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.conferencia-nota .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  font-size: 0.875rem;
+  min-height: 44px;
+}
+
+.conferencia-nota .btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.conferencia-nota .btn-primary:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.conferencia-nota .btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.conferencia-nota .btn-secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.conferencia-nota .btn-outline {
+  background: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.conferencia-nota .btn-outline:hover:not(:disabled) {
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+.conferencia-nota .btn:disabled {
+  background: #9ca3af;
+  color: #f9fafb;
+  cursor: not-allowed;
+}
+
+.conferencia-nota .filters-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.conferencia-nota .search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.conferencia-nota .search-box input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.conferencia-nota .filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.conferencia-nota .filter-group select {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background: white;
+}
+
+.conferencia-nota .stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0 2rem;
+}
+
+.conferencia-nota .stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 70px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.conferencia-nota .stat-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.conferencia-nota .stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.conferencia-nota .stat-icon.blue {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.conferencia-nota .stat-icon.green {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.conferencia-nota .stat-icon.orange {
+  background: #fed7aa;
+  color: #c2410c;
+}
+
+.conferencia-nota .stat-icon.red {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.conferencia-nota .stat-content h3 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.conferencia-nota .stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1;
+}
+
+.conferencia-nota .date-selector {
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.conferencia-nota .date-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.conferencia-nota .date-input-group label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.conferencia-nota .date-input-group input {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.conferencia-nota .loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #6b7280;
+}
+
+.conferencia-nota .spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.conferencia-nota .empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.conferencia-nota .error-message {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0 2rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #dc2626;
+}
+
+.conferencia-nota .error-content {
+  flex: 1;
+}
+
+.conferencia-nota .error-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.conferencia-nota .table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.conferencia-nota .content-section {
+  padding: 0 2rem;
+}
+
+/* Adicionar estes estilos ao arquivo existente */
+
+/* Container dos cedentes */
+.conferencia-nota .cedentes-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.conferencia-nota .cedentes-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.conferencia-nota .header-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.conferencia-nota .header-info svg {
+  color: #3b82f6;
+}
+
+.conferencia-nota .header-info h3 {
+  margin: 0 0 0.25rem 0;
+  color: #1f2937;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.conferencia-nota .header-info p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Tabela de cedentes */
+.conferencia-nota .cedentes-table-container {
+  overflow-x: auto;
+}
+
+.conferencia-nota .cedentes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.conferencia-nota .cedentes-table th {
+  background: #f9fafb;
+  padding: 1rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.conferencia-nota .cedentes-table td {
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: middle;
+}
+
+.conferencia-nota .cedente-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.conferencia-nota .cedente-row:hover {
+  background-color: #f8fafc;
+}
+
+.conferencia-nota .cedente-row:hover .cedente-name {
+  color: #3b82f6;
+}
+
+/* Coluna de proposta */
+.conferencia-nota .proposta-header {
+  min-width: 120px;
+  width: 12%;
+}
+
+.conferencia-nota .proposta-info {
+  min-width: 120px;
+}
+
+.conferencia-nota .proposta-display {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.conferencia-nota .proposta-numero {
+  font-weight: 600;
+  color: #3b82f6;
+  font-size: 0.875rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.conferencia-nota .proposta-data {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.conferencia-nota .proposta-sem-numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.conferencia-nota .sem-proposta {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-style: italic;
+  background: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Coluna de cedente */
+.conferencia-nota .cedente-header {
+  min-width: 250px;
+  width: 30%;
+}
+
+.conferencia-nota .cedente-info {
+  min-width: 250px;
+}
+
+.conferencia-nota .cedente-main {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.conferencia-nota .cedente-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #eff6ff;
+  border-radius: 8px;
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.conferencia-nota .cedente-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.conferencia-nota .cedente-name {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.conferencia-nota .cedente-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.conferencia-nota .meta-item {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.conferencia-nota .status-operacao {
+  font-size: 0.625rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.conferencia-nota .status-operacao.ativo {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.conferencia-nota .status-operacao.pendente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.conferencia-nota .status-operacao.concluido {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.conferencia-nota .status-operacao.cancelado {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* Colunas de contadores */
+.conferencia-nota .titulos-count {
+  width: 10%;
+  text-align: center;
+}
+
+.conferencia-nota .count-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.conferencia-nota .valor-total {
+  width: 15%;
+  text-align: right;
+}
+
+.conferencia-nota .valor-display {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.conferencia-nota .valor-amount {
+  font-weight: 600;
+  color: #059669;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* Colunas de NFe */
+.conferencia-nota .nfe-com,
+.conferencia-nota .nfe-sem {
+  width: 10%;
+  text-align: center;
+}
+
+.conferencia-nota .nfe-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  min-width: 60px;
+}
+
+.conferencia-nota .nfe-badge.success {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.conferencia-nota .nfe-badge.warning {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+/* Coluna de percentual */
+.conferencia-nota .nfe-percentual {
+  width: 8%;
+  text-align: center;
+}
+
+.conferencia-nota .percentual-badge {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  min-width: 50px;
+  text-align: center;
+}
+
+.conferencia-nota .percentual-badge.high {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.conferencia-nota .percentual-badge.medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.conferencia-nota .percentual-badge.low {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* Coluna de ações */
+.conferencia-nota .acoes {
+  width: 15%;
+  text-align: center;
+}
+
+.conferencia-nota .action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.conferencia-nota .action-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Resumo dos cedentes */
+.conferencia-nota .cedentes-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+}
+
+.conferencia-nota .summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.conferencia-nota .summary-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.conferencia-nota .summary-value {
+  font-size: 0.875rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Detalhes dos títulos */
+.conferencia-nota .titulos-detalhes {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.conferencia-nota .detalhes-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.conferencia-nota .back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.conferencia-nota .back-button:hover {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.conferencia-nota .cedente-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.conferencia-nota .cedente-info svg {
+  color: #3b82f6;
+}
+
+.conferencia-nota .cedente-info h2 {
+  margin: 0 0 0.25rem 0;
+  color: #1f2937;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.conferencia-nota .cedente-info p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .conferencia-nota .cedentes-table {
+    min-width: 1000px;
+  }
+  
+  .conferencia-nota .action-btn span {
+    display: none;
+  }
+  
+  .conferencia-nota .action-btn {
+    padding: 0.5rem;
+    min-width: 40px;
+  }
+  
+  .conferencia-nota .cedente-meta {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .conferencia-nota .cedentes-table {
+    min-width: 800px;
+  }
+  
+  .conferencia-nota .proposta-data {
+    display: none;
+  }
+  
+  .conferencia-nota .cedentes-summary {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .conferencia-nota .detalhes-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .conferencia-nota .cedentes-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .conferencia-nota .cedentes-header {
+    padding: 1rem;
+  }
+  
+  .conferencia-nota .cedentes-table th,
+  .conferencia-nota .cedentes-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.conferencia-nota .cedentes-container,
+.conferencia-nota .titulos-detalhes {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Estados de hover melhorados */
+.conferencia-nota .cedente-row:hover .proposta-numero {
+  color: #1d4ed8;
+}
+
+.conferencia-nota .cedente-row:hover .cedente-icon {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.conferencia-nota .cedente-row:hover .count-badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* Animações específicas */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.conferencia-nota .spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* Responsividade específica */
+@media (max-width: 768px) {
+  .conferencia-nota .stats-cards {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .conferencia-nota .date-selector {
+    padding: 0 1rem;
+  }
+  
+  .conferencia-nota .content-section {
+    padding: 0 1rem;
+  }
+  
+  .conferencia-nota .table-footer {
+    padding: 1rem;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .conferencia-nota .cedentes-table-container {
+    overflow-x: scroll;
+  }
+  
+  .conferencia-nota .cedentes-table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .conferencia-nota .cedentes-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .conferencia-nota .action-btn span {
+    display: none;
+  }
+}
+
+/* CSS para TitulosDetalhes */
+
+.conferencia-nota .titulos-detalhes {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.conferencia-nota .detalhes-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.conferencia-nota .back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.conferencia-nota .back-button:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.conferencia-nota .cedente-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.conferencia-nota .cedente-main-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.conferencia-nota .cedente-icon-large {
+  width: 60px;
+  height: 60px;
+  background: #eff6ff;
+  color: #3b82f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.conferencia-nota .cedente-details-header {
+  flex: 1;
+}
+
+.conferencia-nota .cedente-name {
+  margin: 0 0 0.5rem 0;
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.conferencia-nota .cedente-subtitle {
+  margin: 0;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.conferencia-nota .header-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.conferencia-nota .export-btn {
+  background: #10b981;
+  color: white;
+}
+
+.conferencia-nota .export-btn:hover {
+  background: #059669;
+}
+
+/* Cards de estatísticas pequenos */
+.conferencia-nota .cedente-stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.conferencia-nota .stat-card-small {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.conferencia-nota .stat-card-small:hover {
+  transform: translateY(-1px);
+}
+
+.conferencia-nota .stat-icon-small {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.conferencia-nota .stat-card-small.primary .stat-icon-small {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.conferencia-nota .stat-card-small.success .stat-icon-small {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.conferencia-nota .stat-card-small.info .stat-icon-small {
+  background: #e0f2fe;
+  color: #0891b2;
+}
+
+.conferencia-nota .stat-card-small.warning .stat-icon-small {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.conferencia-nota .stat-card-small.neutral .stat-icon-small {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.conferencia-nota .stat-content-small {
+  flex: 1;
+}
+
+.conferencia-nota .stat-value-small {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.conferencia-nota .stat-label-small {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Filtros dos títulos */
+.conferencia-nota .titulos-filters {
+  padding: 1.5rem;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.conferencia-nota .filters-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.conferencia-nota .search-filter,
+.conferencia-nota .select-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.conferencia-nota .search-filter svg,
+.conferencia-nota .select-filter svg {
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.conferencia-nota .search-filter input,
+.conferencia-nota .select-filter select {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.conferencia-nota .results-info {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: right;
+}
+
+/* Tabela de títulos detalhada */
+.conferencia-nota .titulos-table-container {
+  overflow-x: auto;
+}
+
+.conferencia-nota .titulos-table-detalhes {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.conferencia-nota .titulos-table-detalhes th {
+  background: #f9fafb;
+  padding: 1rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.conferencia-nota .titulos-table-detalhes th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.conferencia-nota .titulos-table-detalhes th.sortable:hover {
+  background: #f3f4f6;
+}
+
+.conferencia-nota .titulos-table-detalhes td {
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: middle;
+}
+
+.conferencia-nota .titulo-row-detalhes {
+  transition: background-color 0.2s ease;
+}
+
+.conferencia-nota .titulo-row-detalhes:hover {
+  background-color: #f8fafc;
+}
+
+.conferencia-nota .numero-display {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.conferencia-nota .numero-principal {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.conferencia-nota .numero-sequencial {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-family: monospace;
+}
+
+.conferencia-nota .sacado-info-detalhes {
+  min-width: 200px;
+}
+
+.conferencia-nota .sacado-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.conferencia-nota .sacado-nome {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.conferencia-nota .sacado-apelido {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.conferencia-nota .cnpj-detalhes {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.conferencia-nota .valor-detalhes {
+  text-align: right;
+}
+
+.conferencia-nota .valor-display {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.conferencia-nota .data-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.conferencia-nota .data-display svg {
+  color: #6b7280;
+}
+
+.conferencia-nota .nfe-badge-detalhes {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.conferencia-nota .nfe-badge-detalhes.has-nfe {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.conferencia-nota .nfe-badge-detalhes.no-nfe {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.conferencia-nota .nfe-numero {
+  font-size: 0.625rem;
+  color: #059669;
+  font-family: monospace;
+  margin-top: 0.125rem;
+}
+
+.conferencia-nota .action-button-small {
+  background: #f3f4f6;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.conferencia-nota .action-button-small:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.conferencia-nota .empty-state-detalhes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.conferencia-nota .empty-state-detalhes svg {
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.conferencia-nota .empty-state-detalhes h3 {
+  margin: 0 0 0.5rem 0;
+  color: #374151;
+  font-size: 1.125rem;
+}
+
+.conferencia-nota .empty-state-detalhes p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Footer dos detalhes */
+.conferencia-nota .detalhes-footer {
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+}
+
+.conferencia-nota .footer-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.conferencia-nota .summary-item-detalhes {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.conferencia-nota .summary-label-detalhes {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.conferencia-nota .summary-value-detalhes {
+  font-size: 0.875rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.conferencia-nota .summary-value-detalhes.success {
+  color: #166534;
+}
+
+.conferencia-nota .summary-value-detalhes.warning {
+  color: #92400e;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .conferencia-nota .filters-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .conferencia-nota .cedente-stats-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .conferencia-nota .titulos-table-detalhes {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .conferencia-nota .cedente-header-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .conferencia-nota .cedente-stats-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .conferencia-nota .footer-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.conferencia-nota .cedentes-table th:nth-child(6) { /* Sem NFe */
+  width: 10%;
+}
+
+.conferencia-nota .cedentes-table th:nth-child(7) { /* % NFe */
+  width: 8%;
+}
+
+.conferencia-nota .cedentes-table th:nth-child(8) { /* Ações */
+  width: 15%;
+}
+
+/* Melhorar responsividade da tabela */
+@media (max-width: 1200px) {
+  .conferencia-nota .cedentes-table {
+    min-width: 1000px;
+  }
+  
+  .conferencia-nota .action-btn span {
+    display: none;
+  }
+  
+  .conferencia-nota .action-btn {
+    padding: 0.5rem;
+    min-width: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .conferencia-nota .cedentes-table {
+    min-width: 800px;
+  }
+  
+  .conferencia-nota .cedente-meta {
+    display: none;
+  }
+  
+  .conferencia-nota .proposta-data {
+    display: none;
+  }
+  
+  .conferencia-nota .cedentes-summary {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* Melhorar visual dos headers ordenáveis */
+.conferencia-nota .cedentes-table th.sortable::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.conferencia-nota .cedentes-table th.sortable:hover::after {
+  background: #3b82f6;
+}
+
+/* Destacar linha selecionada */
+.conferencia-nota .cedente-row.selected {
+  background: #eff6ff;
+  border-left: 3px solid #3b82f6;
+}
+
+/* Animação para mudança de ordenação */
+.conferencia-nota .cedentes-table tbody {
+  transition: all 0.3s ease;
+}
+
+/* Indicador visual de ordenação ativa */
+.conferencia-nota .cedentes-table th.sortable.active {
+  background: #f0f9ff;
+  color: #1d4ed8;
+}
+
+/* Tooltip para informações adicionais */
+.conferencia-nota .proposta-numero:hover {
+  cursor: help;
+}
+
+.conferencia-nota .cedente-name:hover {
+  cursor: pointer;
+  color: #3b82f6;
+}
+
+/* Melhorar contraste dos badges */
+.conferencia-nota .nfe-badge {
+  border: 1px solid transparent;
+}
+
+.conferencia-nota .nfe-badge.success {
+  border-color: #bbf7d0;
+}
+
+.conferencia-nota .nfe-badge.warning {
+  border-color: #fde68a;
+}
+
+/* Adicionar loading state para ordenação */
+.conferencia-nota .cedentes-table.sorting {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.conferencia-nota .cedentes-table.sorting tbody {
+  transform: translateY(2px);
+}
